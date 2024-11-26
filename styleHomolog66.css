@@ -21,8 +21,8 @@ svg {
 svg text {
     /*animation: stroke 6s;*/
     stroke-width: 2;
-    stroke: var(--dark-color);
-    font-size: 24px;
+    stroke: #fff;
+    font-size: 34px;
 }
 /*@keyframes stroke {*/
 /*	0%   {*/
@@ -36,8 +36,6 @@ svg text {
 /*		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;*/
 /*	}*/
 /*}*/
-
-
 .nav-link:focus, .nav-link:hover {
     color: var(--main-color);
 }
@@ -84,12 +82,15 @@ aside .top-list h1{
 }
 
 .navlist li.active{
-    background: var(--white-color-dois);
+    background: #ffffff;
     border-radius: 10px;
 }
 
 .navlist li.active a, .navlist li.active a h3{
-    color: var(--main-color-tres);
+    color: var(--main-color-2);
+}
+.navlist li.active a h3.drop{
+    color: #ffffff;
 }
 
 aside .navlist li.logouti{
@@ -111,6 +112,7 @@ aside .navlist li.logouti{
 .navlist a h3{
      color: #ffffff;
      font-size: 1rem;
+     margin-bottom:0;
 }
 
 .navbar-nav{
@@ -152,9 +154,7 @@ aside .navlist li.logouti{
 }
 
 .sub-menu-wrap.open-menu{
-    height: 100vh;
-    overflow-y: auto;
-    background-color: royalblue;
+    max-height:400px;
 }
 
 .sub-menu{
@@ -192,7 +192,6 @@ aside .navlist li.logouti{
     align-items:center;
     color:var(--font-color);
     margin:12px 0px;
-   
 }
 
 .sub-menu-link p{
@@ -238,7 +237,7 @@ aside .navlist li.logouti{
 }
 
 .switch-themei .switch-iconsi{
-    background: var(--white-color);
+    background: var(--color-main);
     color: var(--main-color);
     border-radius: 30px;
     display: flex;
@@ -256,11 +255,13 @@ aside .navlist li.logouti{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    color:var(--dark-color);
 }
 
 .switch-themei .switch-iconsi span.active{
-    background: var(--main-color);
-    border-radius: 30px;
+    background: var(--font-color);
+    border-radius: 22px;
+    height: 1.55rem;
     color: var(--white-color);
     transition: all .3s ease;
 }
@@ -274,7 +275,7 @@ aside .navlist li.logouti{
 
 .datails-boxi {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 1rem;
     margin-top: 1.3rem;
 }
@@ -337,6 +338,7 @@ aside .navlist li.logouti{
     flex-direction: column;
     color: var(--font-color);
     /* gap: 0.1rem; */
+    font-weight:600;
 }
 
 .infoi strong{
@@ -404,23 +406,6 @@ canvas{
 
 .legend-boxi button.second:hover{
     background: #5d92df;
-}
-
-.view-button{
-    color: rgb(17, 171, 166);
-    text-align: center;
-    font-size: 1rem;
-    background-color: transparent;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    gap: .5rem;
-    cursor: pointer;
-    &:hover{
-        transform: scale(1.1);
-    }
 }
 
 .main-texti .legend-boxi span{
@@ -731,10 +716,8 @@ canvas{
     transition:max-height 0.5s;
 }
 
-.sub-menu-wrap.open-menu {
-    max-height: 447px;
-    width: 350px;
-    overflow: auto;
+.sub-menu-wrap.open-menu-notificacao{
+    max-height:400px;
 }
 
 .sub-menu{
@@ -802,6 +785,7 @@ canvas{
     color:var(--main-color);
 }
 
+/* Notificação */
 .message{
     line-height: 95%;
 }
@@ -823,7 +807,7 @@ canvas{
     text-align: left;
     height: 40px;
     margin-top: -10px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:Georgia, 'Times New Roman', Times, serif
 }
 @media screen and (max-width:1200px){
     .containeri{
@@ -835,7 +819,7 @@ canvas{
     aside .logo-boxi h1{
         display: none;
     }
-    aside h3{
+    aside h3.none{
         display: none;
     }
     aside .logo-boxi{
@@ -850,10 +834,10 @@ canvas{
     aside .navlist li.logouti{
         left: 25px;
     }
-    .datails-boxi{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
+    /*.datails-boxi{*/
+    /*    display: grid;*/
+    /*    grid-template-columns: 1fr;*/
+    /*}*/
     .details-charti{
         display: block;
         margin: 1rem 0;
@@ -885,7 +869,7 @@ canvas{
         display:flex;
     }
 
-    aside h3{
+    aside h3.none{
         display: inline;
     }
     aside .top-list{
